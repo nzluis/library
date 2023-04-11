@@ -1,0 +1,112 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #FAFAD2;
+}
+
+.gridContainer {
+    display: grid;
+    grid-template-rows: 2fr 1fr 10fr;
+}
+
+.header {
+    display: flex;
+    justify-content:center;
+    margin-top: 35px;
+    margin-bottom: 35px;
+}
+
+.gridContainer>Button {
+    width: 70px;
+    height: 1.5rem;
+    justify-self: center;
+}
+
+.cards {
+    display: grid;
+    align-content: flex-start;
+    grid-template-columns: repeat(auto-fit, minmax(250px, .4fr));
+    grid-auto-rows: 200px;
+}
+
+.card { 
+    margin: 25px 45px;
+    display: grid;
+    background-color: #DFE9FB;
+    border: 2px solid #DFE9FB;
+    border-radius: 15px;
+    padding: 8px;
+    text-align: center;
+}
+
+.choices {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.popup {
+    position: fixed;
+    top: 35%;
+    left: 38%;
+    padding: 15px;
+    background-color: #E7E9EC
+    ;
+    visibility: hidden;
+    transform: scale(.7);
+    opacity: 0;
+    box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.3);
+    border-radius: 15px;
+    transition: all .5s;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-around;
+}
+
+button{
+    padding: 3px;
+    border-radius: 5px;
+    border: none;
+    background-color: #0074D9;
+    color: white;
+}
+
+.popup.active {
+    visibility: visible;
+    opacity: 1;
+    transform: scale(1);
+    border: none;
+}
+
+.gridContainer.active {
+    filter: blur(1px);
+    background-color: rgba(0, 0, 0, 0.1);
+    pointer-events: none;
+    user-select: none;
+    opacity: 0.7;
+}
+
+input[type="text"] {
+  font: 1.25rem / 1.5 sans-serif;
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  border: 0;
+}
+
+input[type="number"]{
+    width: 50%;
+}
+
+form>div{
+    margin: 6px 0px;
+}
+
+form>div>button{
+    padding: 10px;
+}
